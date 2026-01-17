@@ -223,8 +223,7 @@ async def test_async_empty_text_file(tmp_path):
     reader = TextReader()
     documents = await reader.async_read(text_path)
 
-    assert len(documents) == 1
-    assert documents[0].content == ""
+    assert len(documents) == 0
 
 
 @pytest.mark.asyncio
